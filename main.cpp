@@ -199,6 +199,8 @@ int main( int argc, char* argv[] )
 					SVG_plot_virus( filename , microenvironment, 0.0 , PhysiCell_globals.current_time, cell_coloring_function );
 					
  					PhysiCell_globals.SVG_output_index++; 
+					if (PhysiCell_globals.SVG_output_index >= 70)
+						std::cout << " ---- main.cpp:  svg index= " <<  PhysiCell_globals.SVG_output_index << std::endl;
 					PhysiCell_globals.next_SVG_save_time  += PhysiCell_settings.SVG_save_interval;
 				}
 			}
